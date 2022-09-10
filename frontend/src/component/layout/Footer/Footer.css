@@ -1,0 +1,109 @@
+footer {
+    margin-top: 10vmax;
+    padding: 2vmax;
+    background-color: rgb(34, 33, 33);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* Left Side */
+.leftFooter {
+  width: 20%;
+  display: flex;
+  order: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.leftFooter > h4 {
+  font-family: "Roboto";
+  font-size: 1vmax;
+  margin-bottom: 1vmax;
+}
+.leftFooter > p {
+  text-align: center;
+  font-size: 1.2vmax;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.leftFooter > img {
+  width: 10vmax;
+  margin: 1vmax;
+  cursor: pointer;
+}
+
+/* Middle */
+.midFooter {
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+.midFooter > h1 > span {
+  font-size: 4vmax;
+  font-family: "Roboto";
+  color: #eb4034;
+  cursor: pointer;
+}
+
+.midFooter > h1 > span:active {
+  opacity: 0.6;
+}
+
+.midFooter > p {
+  font-size: 1.2vmax;
+  max-width: 60%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 1vmax auto;
+}
+
+/* Right Side */
+.rightFooter {
+  width: 20%;
+  display: flex;
+  order: 3;
+  flex-direction: column;
+  align-items: center;
+}
+.rightFooter > h4 {
+  font-family: "Roboto";
+  font-size: 1.4vmax;
+  text-decoration: underline;
+}
+.rightFooter > a {
+  text-decoration: none;
+  font-size: 1.3vmax;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  transition: all 0.5s;
+  margin: 0.5vmax;
+}
+.rightFooter > a:hover {
+  color: #eb4034;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+      display: flex;
+      flex-direction: column;
+      padding: 2vmax;
+  }
+  .leftFooter {
+      width: 100%;
+      margin-top: 2vmax;
+      order: 3;
+  }
+  .midFooter {
+      width: 100%;
+      order: 1;
+  }
+  .midFooter > h1 {
+      font-size: 3vmax;
+  }
+  .rightFooter {
+      width: 100%;
+      margin-top: 2vmax;
+      order: 2;
+  }
+}
