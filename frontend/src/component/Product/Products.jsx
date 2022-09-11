@@ -102,7 +102,9 @@ const Products = ({ history, match }) => {
                     ): (
                         <div className="noProductFound">
                             <h3>No Products Found</h3>
-                            <p onClick={()=>history.goBack()}>Go Back</p>
+                            {keyword && (
+                                <p onClick={()=>history.goBack()}>Go Back</p>
+                            )}
                         </div>
                     )}
                 </div>

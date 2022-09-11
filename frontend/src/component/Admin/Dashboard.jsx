@@ -108,10 +108,18 @@ const Dashboard = () => {
             <div className="lineChart">
               <Line data={lineState} />
             </div>
-
-            <div className="doughnutChart">
-              <Doughnut data={doughnutState} />
-            </div>
+        
+            {
+              doughnutState?.datasets[0]?.data[0] === 0 && doughnutState?.datasets[0]?.data[1] === 0 ? (
+                <div className="doughnutChartNotShown">
+                  <p>Nothing In Stock</p>
+                </div>
+              ) : (
+                <div className="doughnutChart">
+                  <Doughnut data={doughnutState} />
+                </div>
+              )
+            }
           </div>
         </div>
       )}

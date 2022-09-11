@@ -72,6 +72,23 @@
     width: 80%;
     margin: auto;
 }
+
+.doughnutChartNotShown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 1.5vmax 0vmax;
+}
+
+.doughnutChartNotShown > p {
+    font: 300 1.5rem "Roboto";
+    color: rgba(0, 0, 0, 0.733);
+    margin: 1.5vmax 0vmax;
+    padding: 1vmax 2.5vmax;
+    background-color: rgb(211,211,211,0.1);
+}
   
 .doughnutChart {
     width: 30vmax;

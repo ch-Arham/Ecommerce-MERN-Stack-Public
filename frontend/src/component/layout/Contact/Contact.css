@@ -11,7 +11,7 @@
 .mailBtn {
     text-decoration: none;
     transform: translateX(-100vw);
-    animation: mailBtnAnimation 2s forwards;
+    animation: mailBtnAnimation 3s forwards;
 }
 
 

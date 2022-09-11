@@ -18,6 +18,8 @@ import FaceIcon from "@material-ui/icons/Face";
 // importing styles
 import "./LoginSignUp.css";
 
+
+// ------------------- LoginSignup Component ---------------------- //
 const LoginSignUp = ({ history, location }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -38,6 +40,7 @@ const LoginSignUp = ({ history, location }) => {
 
   const [avatar, setAvatar] = useState("/Profile.png");
   const [avatarPreview, setAvatarPreview] = useState("/Profile.png");
+  const [currentTab, setCurrentTab] = useState("Login");
 
   // Use Effects
   const redirect = location.search ? location.search.split("=")[1] : "/account";
@@ -61,6 +64,7 @@ const LoginSignUp = ({ history, location }) => {
   // Functions
   const switchTabs = (e, tab) => {
     if (tab === "login") {
+      setCurrentTab("Login");
       switcherTab.current.classList.add("shiftToNeutral");
       switcherTab.current.classList.remove("shiftToRight");
 
@@ -68,6 +72,7 @@ const LoginSignUp = ({ history, location }) => {
       loginTab.current.classList.remove("shiftToLeft");
     }
     if (tab === "register") {
+      setCurrentTab("Register");
       switcherTab.current.classList.add("shiftToRight");
       switcherTab.current.classList.remove("shiftToNeutral");
 
@@ -114,7 +119,7 @@ const LoginSignUp = ({ history, location }) => {
         <Loader />
       ) : (
         <>        
-          <MetaData title="Login" />
+          {currentTab === "Login" ? <MetaData title="Login" /> : <MetaData title="Register" />}
           <div className="LoginSignUpContainer">
             <div className="LoginSignUpBox">
               <div>
