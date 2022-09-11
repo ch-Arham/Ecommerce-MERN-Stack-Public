@@ -2,9 +2,9 @@ import axios from "axios";
 
 
 export default axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: "https://royal-collections.herokuapp.com",
     // withCredentials: true,
 });
 
 // localhost --> http://localhost:5000
-// heroku -->
+// heroku -->   https://royal-collections.herokuapp.com
